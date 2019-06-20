@@ -4,7 +4,7 @@
   "description": "Mest API",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config jest-config.json --forceExit"
+    "test": "jest --config test.json --forceExit"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "joi": "^14.3.1"
   }
 }
