@@ -1,0 +1,38 @@
+{
+  "name": "mest-api",
+  "version": "1.0.0",
+  "description": "Mest API",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config jest-config.json --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukaportes/mest-api.git"
+  },
+  "keywords": [
+    "mest",
+    "api",
+    "test",
+    "testing",
+    "performance",
+    "software"
+  ],
+  "author": "Murilo Portescheller <@mukaportes>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mukaportes/mest-api/issues"
+  },
+  "homepage": "https://github.com/mukaportes/mest-api#readme",
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "install": "^0.12.2",
+    "jest": "^24.8.0",
+    "npm": "^6.9.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
