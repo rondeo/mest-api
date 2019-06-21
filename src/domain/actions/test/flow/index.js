@@ -9,8 +9,8 @@ module.exports = function TestFlowAction({
   this.validator = validator;
 
   this.run = async function run(input) {
-    if (this.validator.isValid(input)) {
-      emitter.emit(events.names.badRequest, { errors: this.validator.getErrors() });
+    if (!this.validator.isValid(input)) {
+      emitter.emit(events.names.badRequest, { errors: this.validator.getErrors(input) });
 
       return;
     }

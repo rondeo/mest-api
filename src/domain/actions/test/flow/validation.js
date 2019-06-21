@@ -1,13 +1,13 @@
 const joi = require('joi');
 
-const optionSchema = joi.object().keys({
+const optionsSchema = joi.object().keys({
   headers: joi.object().required(),
   queryString: joi.object().required(),
   queryParams: joi.object().required(),
   body: joi.object().required(),
 }).required();
 
-const settingSchema = joi.object().keys({
+const settingsSchema = joi.object().keys({
   type: joi.number().required(),
   fromName: joi.string().required(),
   toName: joi.string().required(),
@@ -17,8 +17,8 @@ const requestSchema = joi.object().keys({
   requestId: joi.number().required(),  
   title: joi.string().required(),  
   url: joi.string().required(),
-  options: optionSchema,
-  setting: settingSchema,  
+  options: optionsSchema,
+  settings: settingsSchema,  
 }).required();
 
 const flowSchema = joi.object({
