@@ -8,7 +8,13 @@ module.exports = function Validator(schema) {
   }
 
   this.isValid = function (input) {
-    return this.validate(input, this.schema).error === null
+    const validationError = this.validate(input, this.schema).error;
+    
+    if (validationError !== null) {
+      console.warn('Validation Errors: ', validationError.details);
+    }
+
+    return validationError === null;
   };
 
   this.getErrors = function (input) {
