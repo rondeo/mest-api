@@ -6,10 +6,11 @@ module.exports = function TestFlowAction({
   validator,
 }) {
   this.emitter = emitter;
+  this.validator = validator;
 
   this.run = async function run(input) {
-    if (validator.isValid(input)) {
-      emitter.emit(events.names.badRequest, { error: messages.common.invalidInput });
+    if (this.validator.isValid(input)) {
+      emitter.emit(events.names.badRequest, { errors: this.validator.getErrors() });
 
       return;
     }

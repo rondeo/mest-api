@@ -1,13 +1,13 @@
 const joi = require('joi');
 
-const settingSchema = joi.object().keys({
+const optionSchema = joi.object().keys({
   headers: joi.object().required(),
   queryString: joi.object().required(),
   queryParams: joi.object().required(),
   body: joi.object().required(),
 }).required();
 
-const optionSchema = joi.object().keys({
+const settingSchema = joi.object().keys({
   type: joi.number().required(),
   fromName: joi.string().required(),
   toName: joi.string().required(),

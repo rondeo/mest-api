@@ -10,7 +10,7 @@ const build = function build(emitter) {
 };
 
 module.exports = {
-  build,
+  build
 };
 
 
