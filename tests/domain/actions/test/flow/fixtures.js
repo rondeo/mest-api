@@ -5,12 +5,12 @@ const generateRequest = () => {
     requestId: faker.random.number(),
     title: faker.random.word(),
     url: faker.internet.url(),
-    options: {
+    settings: {
       type: faker.random.number(),
       fromName: faker.random.word(),
       toName: faker.random.word(),
     },
-    settings: {
+    options: {
       headers: {},
       queryString: {},
       queryParams: {},
